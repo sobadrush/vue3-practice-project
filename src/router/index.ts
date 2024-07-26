@@ -12,12 +12,14 @@ const router = createRouter({
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
+      // 路由級別的代碼分割
+      // 這會為這個路由生成一個單獨的代碼塊 (About.[hash].js)
+      // 當訪問這個路由時，會懶加載(lazy-loaded)這個代碼塊
       component: () => import('../views/AboutView.vue')
     }
   ]
 })
 
 export default router
+
+
