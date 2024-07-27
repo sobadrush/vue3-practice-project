@@ -1,3 +1,5 @@
+<!-- script setup: 是一種在SFC(Single File Component)中使用的語法糖 -->
+<!-- 主要是不再需要透過return，才能在 template 使用特定的變數或函式(也包含import進來的內容)，也因為如此，能讓程式碼看起來更簡潔 -->
 <script setup lang="ts">
   // 父傳子
   defineProps<{ msg: string }>()
