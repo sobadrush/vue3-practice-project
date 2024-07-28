@@ -19,6 +19,11 @@ const router = createRouter({
             component: () => import('../views/AboutView.vue'),
         },
         {
+            path: '/testRouter/:userId?', // '?' 表示可選參數
+            name: 'myTestRouter',
+            component: () => import('../components/RouterTestComponent.vue'),
+        },
+        {
             path: '/404',
             name: 'page_not_exist',
             component: PageNotExistView,

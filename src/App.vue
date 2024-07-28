@@ -2,7 +2,7 @@
   import { RouterLink, RouterView } from 'vue-router'
   // import HelloWorld from './components/HelloWorld.vue'
   import SidebarComponent from './components/sidebar-component/index.vue' // 因為使用 class component , vue3 會怪怪的
-  import HeaderComponent from "./components/header-component.vue";
+  import HeaderComponent from "./components/HeaderComponent.vue";
 </script>
 
 <template>
