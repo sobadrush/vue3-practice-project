@@ -21,8 +21,6 @@
       <!-- 路由抽換區 -->
       <RouterView />
     </div>
-
-
   </div>
 </template>
 
