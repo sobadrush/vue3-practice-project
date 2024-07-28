@@ -8,31 +8,36 @@
         <ul class="list-unstyled components mb-5">
 
             <li>
-                <RouterLink to="/">HomePage</RouterLink>
+              <RouterLink to="/">HomePage</RouterLink>
             </li>
 
             <li>
-                <!-- <RouterLink to="/about">About</RouterLink> -->
-                <a href="javascript:void(0)" @click.prevent="goToAbout">About</a>
+              <!-- <RouterLink to="/about">About</RouterLink> -->
+              <a href="javascript:void(0)" @click.prevent="goToAbout">About</a>
             </li>
 
             <li>
-                <a href="#pageSubmenu"
-                    data-toggle="collapse"
-                    aria-expanded="false"
-                    class="dropdown-toggle">Pages
-                </a>
-                <ul class="collapse list-unstyled" id="pageSubmenu">
-                    <li>
-                        <a href="javascript:void(0)">Page 1</a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">Page 2</a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">Page 3</a>
-                    </li>
-                </ul>
+              <button type="button" class="btn btn-outline-secondary" @click.prevent="changeHightlight">change-highlight (isHighlight: {{isHighlight}})</button>
+              <router-link v-bind:class="{ 'highlight_red': isHighlight }" to="HaHaHa">404 Page</router-link>
+            </li>
+
+            <li>
+              <a href="#pageSubmenu"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  class="dropdown-toggle">Pages
+              </a>
+              <ul class="collapse list-unstyled" id="pageSubmenu">
+                  <li>
+                      <a href="javascript:void(0)">Page 1</a>
+                  </li>
+                  <li>
+                      <a href="javascript:void(0)">Page 2</a>
+                  </li>
+                  <li>
+                      <a href="javascript:void(0)">Page 3</a>
+                  </li>
+              </ul>
             </li>
         </ul>
 

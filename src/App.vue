@@ -1,7 +1,8 @@
 <script setup lang="ts">
   import { RouterLink, RouterView } from 'vue-router'
   // import HelloWorld from './components/HelloWorld.vue'
-  import SidebarComponent from './components/sidebar-component/index.vue'
+  import SidebarComponent from './components/sidebar-component/index.vue' // 因為使用 class component , vue3 會怪怪的
+  import HeaderComponent from "./components/header-component.vue";
 </script>
 
 <template>
@@ -10,40 +11,13 @@
     <!-- Sidebar  -->
     <SidebarComponent />
 
+    
     <!-- Page Content  -->
     <div id="content" class="p-4 p-md-5">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-
-          <!-- 收合按鈕 -->
-          <button type="button" id="sidebarCollapse" class="btn btn-primary">
-
-          <i class="fa fa-bars"></i>
-          <span class="sr-only">Toggle Menu</span>
-          </button>
-          <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fa fa-bars"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="nav navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="javascript:void(0)">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0)">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0)">Portfolio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0)">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
       
-      <!-- <h2 class="mb-4">Sidebar #01</h2> -->
+      <!-- Header 區 -->
+      <HeaderComponent />
+      
       <!-- 路由抽換區 -->
       <RouterView />
     </div>
