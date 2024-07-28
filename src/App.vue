@@ -10,7 +10,6 @@
 
     <!-- Sidebar  -->
     <SidebarComponent />
-
     
     <!-- Page Content  -->
     <div id="content" class="p-4 p-md-5">
@@ -20,6 +19,7 @@
       
       <!-- 路由抽換區 -->
       <RouterView />
+    
     </div>
   </div>
 </template>
