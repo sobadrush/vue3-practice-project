@@ -19,7 +19,7 @@ const router = createRouter({
             component: () => import('../views/AboutView.vue'),
         },
         {
-            path: '/testRouter/:userId?', // '?' 表示可選參數
+            path: '/testRouter/:userId?', // '?' 表示可選參數，router-link 使用 params 來傳遞參數時必需有此設定 /:userId
             name: 'myTestRouter',
             component: () => import('../components/RouterTestComponent.vue'),
         },
