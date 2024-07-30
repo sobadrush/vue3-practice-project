@@ -6,3 +6,11 @@
 #sidebar .highlight_red {
   color: rgb(255, 0, 0);
 }
+
+#sidebar .highlight_cyan {
+  color: cyan
+}
+
+#pageSubmenu-222 a {
+  color: cyan
+}

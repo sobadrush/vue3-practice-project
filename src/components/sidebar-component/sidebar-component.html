@@ -65,15 +65,16 @@
               <a href="#pageSubmenu-222"
                   data-toggle="collapse"
                   aria-expanded="false"
-                  class="dropdown-toggle">Pages
+                  class="dropdown-toggle" :class="{ 'highlight_cyan' : true }">Vue 基礎語法
               </a>
               <ul class="collapse list-unstyled" id="pageSubmenu-222">
                   <li>
                       <!-- <a href="javascript:void(0)">Page 1</a> -->
-                      <router-link to="/testComponent">Computed 計算屬性</router-link>
+                      <router-link to="/toComponentA">Computed 計算屬性</router-link>
                   </li>
                   <li>
-                      <a href="javascript:void(0)">Page 2</a>
+                      <!-- <a href="javascript:void(0)">Page 2</a> -->
+                      <router-link :to="linkPath">linkName</router-link>
                   </li>
                   <li>
                       <a href="javascript:void(0)">Page 3</a>
