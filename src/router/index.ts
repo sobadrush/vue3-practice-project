@@ -30,6 +30,11 @@ const router = createRouter({
           component: ComponentB,
         },
         {
+          path: '/toComponentC',
+          name: 'component_c',
+          component: () => import('@/components/Component-C.vue'),
+        },
+        {
             path: '/about',
             name: 'about',
             // 路由級別的代碼分割
