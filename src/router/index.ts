@@ -2,7 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import PageNotExistView from '../views/PageNotExistView.vue';
 import HelloWorld from '@/components/HelloWorld.vue'
-import TestComponent from '@/components/TestComponent.vue'
+import ComponentA from '@/components/Component-A.vue'
+import ComponentB from "@/components/Component-B.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -19,9 +20,14 @@ const router = createRouter({
             props: route => ({ myMsg: route.query.testMsg }) // 使用 query 參數傳遞 msg
         },
         {
-            path: '/testComponent',
-            name: 'test_component',
-            component: TestComponent,
+            path: '/toComponentA',
+            name: 'component_a',
+            component: ComponentA,
+        },
+        {
+          path: '/toComponentB',
+          name: 'component_b',
+          component: ComponentB,
         },
         {
             path: '/about',
