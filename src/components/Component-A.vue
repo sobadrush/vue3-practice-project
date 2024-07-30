@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>TestComponent.vue</h1>
+    <h1>Component-A.vue</h1>
     <hr/>
     <h5>總價：{{ price * quantity }}</h5>
     <br/>
