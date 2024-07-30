@@ -14,6 +14,20 @@
             <li>
               <!-- <RouterLink to="/about">About</RouterLink> -->
               <a href="javascript:void(0)" @click.prevent="goToAbout">About</a>
+              <!-- <button href="javascript:void(0)" @click.prevent="goToAbout">About</button> -->
+            </li>
+
+            <li>
+                <!-- 加入：custom，才不會讓 <button> 外在長出一個 <a> -->
+                <router-link :to="{ name: 'hello_world', query: { testMsg: '0912-345-678' } }" custom v-slot="{ navigate }">
+                    <button type="button" 
+                            style="margin: 1rem;" 
+                            class="btn-sm btn-outline-info" 
+                            @click="navigate">
+                        HelloWorld
+                    </button>
+                </router-link>
+                <hr>
             </li>
 
             <li>

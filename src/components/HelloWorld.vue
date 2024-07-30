@@ -2,12 +2,13 @@
 <!-- 主要是不再需要透過return，才能在 template 使用特定的變數或函式(也包含import進來的內容)，也因為如此，能讓程式碼看起來更簡潔 -->
 <script setup lang="ts">
   // 父傳子
-  defineProps<{ msg: string }>()
+  defineProps<{ myMsg: string }>()
 </script>
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
+    <h1>I'm HelloWorld.vue</h1>
+    <h2 class="green">{{ myMsg }}</h2>
     <h3>
       You’ve successfully created a project with
       <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
@@ -17,6 +18,10 @@
 </template>
 
 <style scoped>
+  .green {
+    color: green;
+  }
+
   h1 {
     font-weight: 500;
     font-size: 2.6rem;
