@@ -1,7 +1,7 @@
 <template>
   <h1>HomePage</h1>
   <p>Current count: {{ count }}</p>
-  <button @click="increment">Increment</button>
+  <button type="button" @click="increment">Increment</button>
 </template>
 
 <script setup lang="ts">
@@ -14,7 +14,6 @@
   const increment = () => {
     count.value++;
   };
-
 </script>
 
 <style scoped>
