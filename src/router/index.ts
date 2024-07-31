@@ -25,14 +25,19 @@ const router = createRouter({
             component: ComponentA,
         },
         {
-          path: '/toComponentB',
-          name: 'component_b',
-          component: ComponentB,
+            path: '/toComponentB',
+            name: 'component_b',
+            component: ComponentB,
         },
         {
-          path: '/toComponentC',
-          name: 'component_c',
-          component: () => import('@/components/Component-C.vue'),
+            path: '/toComponentC',
+            name: 'component_c',
+            component: () => import('@/components/Component-C.vue'),
+        },
+        {
+            path: '/toComponentD',
+            name: 'component_d',
+            component: () => import('@/components/Component-D.vue'),
         },
         {
             path: '/about',
