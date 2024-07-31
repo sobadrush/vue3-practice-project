@@ -1,7 +1,7 @@
 <template>
     <h1>Component-C</h1>
     <hr/>
-    <button type="button" @click.prevent="switchShowPic1" class="btn-lg btn-outline-primary">v-if 顯示圖片 ({{ showPicIndex }})</button>
+    <button type="button" v-on:click.prevent="switchShowPic1" class="btn-lg btn-outline-primary">v-if 顯示圖片 ({{ showPicIndex }})</button>
     <button type="button" @click.prevent="switchShowPic2" class="btn-lg btn-outline-primary">v-show 顯示圖片 ({{ isShowPic }})</button>
     
     <div id="container-1" v-if="showPicIndex === 1">
