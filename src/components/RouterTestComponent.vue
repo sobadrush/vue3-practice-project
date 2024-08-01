@@ -12,6 +12,16 @@
 
     <hr/>
 
+    <button type="button" class="btn btn-outline-success" @click.prevent="toRouterTestComponent">測試 onBeforeRouteUpdate</button>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">輸入電話號碼，沒輸入無法跳轉</span>
+      </div>
+      <input type="text" v-model="phoneNumber" class="form-control" placeholder="電話號碼"/>
+    </div>
+
+    <hr/>
+
     ⏺ router.options.history:<br/>
     <code>
       {{ router.options.history }}
@@ -32,12 +42,13 @@
 
 <script setup lang="ts">
   import { onMounted, ref } from 'vue';
-  import { useRoute, useRouter } from 'vue-router';
+  import { onBeforeRouteUpdate, useRoute, useRouter } from 'vue-router';
   
   const route = useRoute(); // 取得當前路由資訊
   const router = useRouter(); // 進行路由導航
 
   const toHomeBtn = ref(); // 取得 toHomeBtn 按鈕
+  const phoneNumber = ref(''); // 使用 ref() 宣告 phoneNumber 變數
 
   onMounted(() => {
     console.log('toHomeBtn:', toHomeBtn.value);
@@ -62,7 +73,28 @@
     router.go(n);
   };
 
-  
+  // onBeforeRouteUpdate：只有同一個路由組件的實例被重用（通過路由參數的變化）時，才會調用它
+  // 每次帶入不同的 userId，才會觸發 onBeforeRouteUpdate
+  const toRouterTestComponent = () => {
+    let userId = (() => {
+      let rand = Math.floor(Math.random() * 90) + 10
+      console.log('rand:', rand);
+      return rand;
+    })();
+    router.replace({ path: `/testRouter/${userId}` }); // replace() 方法不會留下歷史記錄
+  }
+
+  // 作用時機：當路由參數發生變化時，觸發 onBeforeRouteUpdate() 方法
+  onBeforeRouteUpdate((to, from, next) => {
+    console.log('%c[RouterTestComponent] 執行 onBeforeRouteUpdate', 'color: yellow;');
+    console.log('to:', to);
+    console.log('from:', from);
+    if (phoneNumber.value === '') {
+      alert('請輸入電話號碼');
+      next(false);
+    }
+    next();
+  });
 </script>
 
 <style scoped>
