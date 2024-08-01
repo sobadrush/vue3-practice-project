@@ -64,7 +64,8 @@ const router = createRouter({
             component: PageNotExistView,
         },
         {
-            path: '/:catchAll(.*)', // '*' 表示任意字串(預設路由)
+            // 萬用路由，要放在路由規則的最後面
+            path: '/:pathMatch(.*)*', // '*' 表示任意字串(萬用路由)，將匹配所有未定義的路由，並將其重定向到 /404 組件。這是一種處理 404 錯誤的常見方式
             redirect: '/404',
         },
     ],
