@@ -48,7 +48,7 @@
   const router = useRouter(); // 進行路由導航
 
   const toHomeBtn = ref(); // 取得 toHomeBtn 按鈕
-  const phoneNumber = ref(''); // 使用 ref() 宣告 phoneNumber 變數
+  const phoneNumber = ref('0912345678'); // 使用 ref() 宣告 phoneNumber 變數
 
   onMounted(() => {
     console.log('toHomeBtn:', toHomeBtn.value);

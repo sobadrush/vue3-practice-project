@@ -5,6 +5,8 @@ import HelloWorld from '@/components/HelloWorld.vue'
 import UsersComponent from '@/components/UsersComponent.vue'
 import ComponentA from '@/components/Component-A.vue'
 import ComponentB from "@/components/Component-B.vue";
+import DeptComponent from "@/components/DeptComponent.vue";
+import EmpComponent from "@/components/EmpComponent.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -24,6 +26,18 @@ const router = createRouter({
             path: '/users/:userId?', // 可選參數
             name: 'to_users',
             component: UsersComponent,
+        },
+        {
+          path: '/dept/:deptId?',
+          name: 'to_dept',
+          component: DeptComponent,
+          children: [ // 子路由(嵌套路由, 巢狀路由)
+            {
+              path: 'emps', // 小心 children 裡面的 path 不要加上 / 開頭，否則會被帶回根目錄
+              name: 'to_emps',
+              component: EmpComponent
+            }
+          ]
         },
         {
             path: '/toComponentA',
