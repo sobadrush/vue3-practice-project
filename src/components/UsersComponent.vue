@@ -10,10 +10,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(val, key, idx) in userInfo">
+        <tr v-for="(vv, kk, idx) in userInfo" :key="kk">
           <td>{{ idx + 1 }}</td>
-          <td>{{ key }}</td>
-          <td :class="{ highlight_red: (val == queryUserId) }">{{ val }}</td>
+          <td>{{ kk }}</td>
+          <td :class="{ highlight_red: (vv == queryUserId) }">{{ vv }}</td>
         </tr>
       </tbody>
   </table>
