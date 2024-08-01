@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import PageNotExistView from '../views/PageNotExistView.vue';
 import HelloWorld from '@/components/HelloWorld.vue'
+import UsersComponent from '@/components/UsersComponent.vue'
 import ComponentA from '@/components/Component-A.vue'
 import ComponentB from "@/components/Component-B.vue";
 
@@ -18,6 +19,11 @@ const router = createRouter({
             name: 'hello_world',
             component: HelloWorld,
             props: route => ({ myMsg: route.query.testMsg }) // 使用 query 參數傳遞 msg
+        },
+        {
+            path: '/users/:userId?', // 可選參數
+            name: 'to_users',
+            component: UsersComponent,
         },
         {
             path: '/toComponentA',

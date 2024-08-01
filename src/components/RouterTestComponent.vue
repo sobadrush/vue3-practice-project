@@ -17,6 +17,16 @@
       {{ router.options.history }}
     </code>
 
+    <hr/>
+    <h3>【動態路由】v-for + js 模板插值 + 路由</h3>
+    <div style="border: 1px solid black;">
+      <ul>
+        <li v-for="ii in 5">
+          <router-link :to="`/users/${ii}`">To Users Page - {{ ii }}</router-link>
+        </li>
+      </ul>
+    </div>
+
   </div>
 </template>
 
@@ -51,6 +61,8 @@
     console.log('go:', n);
     router.go(n);
   };
+
+  
 </script>
 
 <style scoped>

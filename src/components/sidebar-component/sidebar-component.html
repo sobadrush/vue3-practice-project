@@ -58,6 +58,9 @@
                       <!-- <a href="javascript:void(0)">路由(帶參數 query)</a> -->
                       <router-link :to="{ path: '/testRouter', query: { empName: 'Roger Lo' }}">路由(帶參數 query，會出現在網址列)</router-link>
                   </li>
+                  <li>
+                    <router-link :to="{ path: '/testRouter' }">動態路由</router-link>
+                  </li>
               </ul>
             </li>
 
