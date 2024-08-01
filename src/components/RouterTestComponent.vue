@@ -87,8 +87,8 @@
   // 作用時機：當路由參數發生變化時，觸發 onBeforeRouteUpdate() 方法
   onBeforeRouteUpdate((to, from, next) => {
     console.log('%c[RouterTestComponent] 執行 onBeforeRouteUpdate', 'color: yellow;');
-    console.log('to:', to);
-    console.log('from:', from);
+    // console.log('to:', to);
+    // console.log('from:', from);
     if (phoneNumber.value === '') {
       alert('請輸入電話號碼');
       next(false);
