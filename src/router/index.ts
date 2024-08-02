@@ -61,6 +61,11 @@ const router = createRouter({
             component: () => import('@/components/Component-D.vue'),
         },
         {
+          path: '/toComponentE',
+          name: 'component_e',
+          component: () => import('@/components/Component-E.vue'),
+        },
+        {
             path: '/about',
             name: 'about',
             // 路由級別的代碼分割
