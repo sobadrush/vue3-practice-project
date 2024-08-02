@@ -3,8 +3,15 @@
   <h2>deptIndex: {{ deptIndex }}</h2>
   <hr>
 
-  Show 
+  1. Show 
   <router-link :to="`/dept/${deptIndex}/emps`">
+    /dept/{{ deptIndex }}/emps
+  </router-link>
+  <br/>
+
+
+  2. Show 
+  <router-link :to="{ path: `/dept/${deptIndex}/emps`, query: { empId: `${deptIndex + '_GG'}` } }">
     /dept/{{ deptIndex }}/emps
   </router-link>
 

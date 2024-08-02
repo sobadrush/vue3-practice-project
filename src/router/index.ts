@@ -20,7 +20,7 @@ const router = createRouter({
             path: '/helloWorld',
             name: 'hello_world',
             component: HelloWorld,
-            props: route => ({ myMsg: route.query.testMsg }) // 使用 query 參數傳遞 msg
+            props: route => ({ myMsg: route.query.testMsg }) // props：路由元件使用 defineProps 接收 props 參數用
         },
         {
             path: '/users/:userId?', // 可選參數
@@ -35,7 +35,8 @@ const router = createRouter({
             {
               path: 'emps', // 小心 children 裡面的 path 不要加上 / 開頭，否則會被帶回根目錄
               name: 'to_emps',
-              component: EmpComponent
+              component: EmpComponent,
+              // props: route => ({ myEmpId: route.query.empId }) // 使用 params 參數傳遞 deptId
             }
           ]
         },
