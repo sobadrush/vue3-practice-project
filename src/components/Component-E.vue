@@ -61,6 +61,8 @@
   );
 
   // 監聽 msg3 的變化(物件型別, 使用 watchEffect)
+  // watchEffect 會在一開始執行一次，並且會在依賴的變數有變化時，重新執行
+  // watchEffect 不需要設定依賴的變數，它會自動偵測
   watchEffect(() => {
     console.log(`msg3: greetingMsg: ${msg3.value.greetingMsg}`);
   });
