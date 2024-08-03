@@ -79,6 +79,11 @@ const router = createRouter({
             component: () => import('../components/RouterTestComponent.vue'),
         },
         {
+          path: '/toSchool',
+          name: 'school_component',
+          component: () => import('@/components/99_SchoolComponent.vue'),
+        },
+        {
             path: '/404',
             name: 'page_not_exist',
             component: PageNotExistView,
