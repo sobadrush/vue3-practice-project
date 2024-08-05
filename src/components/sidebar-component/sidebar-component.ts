@@ -26,4 +26,5 @@ export default class SidebarComponent extends Vue {
   changeHightlight = () => {
     this.isHighlight = !this.isHighlight;
   }
+
 }

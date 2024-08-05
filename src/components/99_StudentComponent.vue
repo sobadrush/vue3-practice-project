@@ -13,7 +13,9 @@
       <input type="text" class="form-control" v-bind:value="numOfStudent"/>
     </div>
   </div>
-
+  <div>
+    <button type="button" class="btn btn-outline-success" @click.prevent="sendEventToFather()">向「父組件」emit 事件</button>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -57,8 +59,19 @@
         return 0;
     }
   })
+
+  // ---------------------------------------------------
+  // 子傳父
+  const myEmit = defineEmits(['myEvent1']);
+  const sendEventToFather = () => {
+    console.log('%c[StudentComponent] sendEventToFather', 'color: lightblue;');
+    myEmit('myEvent1', '@@@ 我是「子組件」emit 的資料 @@@');
+  }
+  // ---------------------------------------------------
 </script>
 
 <style scoped>
-  
+  button {
+    margin: 1em;
+  }
 </style>
