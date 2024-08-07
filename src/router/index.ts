@@ -79,9 +79,14 @@ const router = createRouter({
             component: () => import('../components/RouterTestComponent.vue'),
         },
         {
-          path: '/toSchool',
-          name: 'school_component',
-          component: () => import('@/components/99_SchoolComponent.vue'),
+            path: '/toSchool',
+            name: 'school_component',
+            component: () => import('@/components/99_SchoolComponent.vue'),
+        },
+        {
+            path: '/toTodoListComponent',
+            name: 'todoList_Component',
+            component: () => import('@/components/98_TodoListComponent.vue'),
         },
         {
             path: '/404',
