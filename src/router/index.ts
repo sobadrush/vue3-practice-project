@@ -89,6 +89,11 @@ const router = createRouter({
             component: () => import('@/components/98_TodoListComponent.vue'),
         },
         {
+            path: '/toComponentF',
+            name: 'to_ComponentF',
+            component: () => import('@/components/Component-F.vue'),
+        },
+        {
             path: '/404',
             name: 'page_not_exist',
             component: PageNotExistView,
