@@ -1,9 +1,11 @@
 <template>
-  <h1>Component-G (子組件)</h1>
-  <hr/>
-  <section>
-    <component :is="myIcons[propsFromParents.p_iconName]" :p_scale="4"></component>
-  </section>
+  <div style="border: 2px dashed blue;">
+    <h1>Component-G (子組件)</h1>
+    <hr/>
+    <section>
+      <component :is="myIcons[propsFromParents.p_iconName]" :p_scale="4"></component>
+    </section>
+  </div>
 </template>
 
 <script setup lang="ts">

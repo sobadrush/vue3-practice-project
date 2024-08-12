@@ -9,7 +9,7 @@
     "support": IconSupport,
     "tooling": IconTooling 
   -->
-  <ComponentG :p_iconName="'ecosystem'"/>
+  <ComponentG :p_iconName="'tooling'"/>
 
 </template>
 
