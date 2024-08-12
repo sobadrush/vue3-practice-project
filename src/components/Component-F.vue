@@ -10,8 +10,8 @@
       "support": IconSupport,
       "tooling": IconTooling 
     -->
-    <!-- <ComponentG :p_iconName="'tooling'" :p_isShowTextarea="'哈囉你好嗎？'" :p_isShowBtn="true"/> -->
-    <ComponentG :p_iconName="'tooling'" :p_isShowTextarea="null" :p_isShowBtn="true"/>
+    <ComponentG :p_iconName="'tooling'" :p_content="'哈囉你好嗎？'" :p_isShowBtn="true"/>
+    <!-- <ComponentG :p_iconName="'tooling'" :p_content="null" :p_isShowBtn="true"/> -->
   </div>
 
 </template>

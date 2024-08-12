@@ -6,7 +6,7 @@
       <component :is="myIcons[propsFromParents.p_iconName]" :p_scale="4"></component>
     </section>
     <section>
-      <textarea v-show="p_isShowTextarea != null" cols="30" rows="10" placeholder="父組件有傳遞資料，才會顯示 textarea 哦！" :value="p_isShowTextarea"></textarea>
+      <textarea v-show="p_content != null" cols="30" rows="10" placeholder="父組件有傳遞資料，才會顯示 textarea 哦！" :value="p_content"></textarea>
       <button v-show="p_isShowBtn" type="button" class="btn btn-lg btn-dark">click me</button>
     </section>
   </div>
@@ -19,7 +19,7 @@
   import IconSupport from '@/components/icons/IconSupport.vue';
   import IconTooling from '@/components/icons/IconTooling.vue';
 
-  const propsFromParents = defineProps(['p_iconName', 'p_isShowTextarea', 'p_isShowBtn']);
+  const propsFromParents = defineProps(['p_iconName', 'p_content', 'p_isShowBtn']);
 
   console.log('propsFromParents:', propsFromParents.p_iconName);
   
