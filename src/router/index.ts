@@ -94,6 +94,11 @@ const router = createRouter({
             component: () => import('@/components/Component-F.vue'),
         },
         {
+            path: '/toSlotTestComponent',
+            name: 'to_SlotTestComponent',
+            component: () => import('@/components/SlotTestComponent.vue'),
+        },
+        {
             path: '/404',
             name: 'page_not_exist',
             component: PageNotExistView,
