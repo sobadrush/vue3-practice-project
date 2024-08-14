@@ -8,6 +8,8 @@
     <section>
       ▲ 說明：父組件有傳遞資料，才會顯示 textarea 哦！<br/>
       <textarea v-show="p_content != null" cols="30" rows="10" placeholder="父組件有傳遞資料，才會顯示 textarea 哦！" :value="p_content"></textarea>
+      <br/>
+      ▲ 說明：父組件有傳遞資料，才會顯示 Button 哦！<br/>
       <button v-show="p_isShowBtn" type="button" class="btn btn-lg btn-dark">click me</button>
     </section>
   </div>
