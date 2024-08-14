@@ -1,9 +1,14 @@
 <template>
-  <h1 style="color:tomato">Im SlotTestComponent</h1>
+  <h1 style="color:tomato">Im SlotTestComponent(父組件)</h1>
 
+  <SlotComponent1>
+    <!-- <h5 style="background-color: bisque;">Hello From Father</h5>
+    <img src="@/assets/images/Kirby-1.webp" alt="Kirby1" width="100" v-for="index in 3" :key="index"/> -->
+  </SlotComponent1>
 
-  <SlotComponent1 />
+  <br/>
   <SlotComponent2 />
+
 </template>
 
 <script setup lang="ts">
