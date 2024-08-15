@@ -18,7 +18,12 @@
   </SlotComponent1>
 
   <br/>
-  <SlotComponent2 />
+
+  <SlotComponent2 :rawData="3.1415926">
+    <template #slot2_A="{ myText }">
+      我想吃：{{ myText }} <br/>
+    </template>
+  </SlotComponent2>
 
 </template>
 
