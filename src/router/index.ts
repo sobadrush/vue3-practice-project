@@ -104,6 +104,11 @@ const router = createRouter({
       component: () => import('@/components/PiniaComponents/PiniaComponent_1.vue'),
     },
     {
+      path: '/toPiniaComponent_2',
+      name: 'to_PiniaComponent_2',
+      component: () => import('@/components/PiniaComponents/PiniaComponent_2.vue'),
+    },
+    {
       path: '/404',
       name: 'page_not_exist',
       component: PageNotExistView,
