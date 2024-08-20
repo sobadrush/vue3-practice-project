@@ -9,7 +9,7 @@
     <h4>counterStore.cubicCount: <b>{{ counterStore.cubicCount() }}</b></h4>
 
     <button type="button" class="btn-sm btn-outline-info" 
-        @click.prevent="() => counterStore.waitAndIcrement(3000)">點我測試 waitAndIcrement</button>
+        @click.prevent="() => counterStore.waitAndIcrement(3000)">點我測試 waitAndIcrement (3秒後更新值)</button>
   </div>
 
   <hr/>
