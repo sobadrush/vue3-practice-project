@@ -1,16 +1,21 @@
 <template>
   <div>
     <h1 style="color: salmon2">我是 PiniaComponent-2</h1>
+    
+    <pre><h5>「todoStore」 所有資料:</h5>{{ todoStore }}</pre>
+    
     <hr/>
+    
     <div class="btn-area">
       <input type="text" placeholder="輸入待辦事項" v-model.lazy="myTodoItem" @input="validInput"/>
-      <button type="button" class="btn btn-outline-primary" @click.prevent="(e) => addOneTodo(e)">新增待辦事項</button>
+      <button type="button" class="btn btn-outline-primary" @click.prevent="(e: any) => addOneTodo(e)">新增待辦事項</button>
       <button type="button" class="btn btn-outline-primary" @click.prevent="removeOneTodo">移除待辦事項</button>
     </div>
     <div>
       <h5>todoStore.todos: <pre>{{ todoStore.todos }}</pre></h5>
       <h5>todoStore.getTodosWithEnglish: <pre>{{ todoStore.getTodosWithEnglish }}</pre></h5>
     </div>
+
   </div>
 </template>
 
